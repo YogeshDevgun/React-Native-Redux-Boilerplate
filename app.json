@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Dwell",
+    "slug": "Dwell",
+    "sdkVersion": "25.0.0",
+    "privacy": "public"
+  },
+  "displayName": "Dwell"
+}
