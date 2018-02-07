@@ -2,14 +2,31 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 
 import store from './config/store'; //Import the store
-import Home from './screens/home' //Import the component file
+import HomeScreen from './screens/HomeScreen'
+import {StackNavigator} from "react-navigation";
+import OnBoardingScreen from "./screens/OnBoardingScreen"; //Import the component file
+
+const RootStack = StackNavigator(
+    {
+        Home: {
+            screen: HomeScreen,
+        },
+        OnBoard: {
+            screen: OnBoardingScreen,
+        },
+    },
+    {
+        initialRouteName: 'Home',
+    }
+);
 
 export default class DwellNative extends Component {
     render() {
         return (
             <Provider store={store}>
-                <Home />
+               <RootStack/>
             </Provider>
         );
     }
 }
+
