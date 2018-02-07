@@ -14,37 +14,14 @@ import * as Actions from '../actions/index';
 class Home extends Component {
     constructor(props) {
         super(props);
-        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-        this.state = {
-            ds: ds
-        };
-    }
-
-    componentDidMount() {
-        this.props.getData(); //call our action
     }
 
     render() {
-     /*   if (this.props.loading) {
-            return (
-                <View style={styles.activityIndicatorContainer}>
-                    <ActivityIndicator
-                        animating={true}
-                        style={[{height: 80}]}
-                        size="small"
-                    />
-                </View>
-            );
-        } else {
-            return (
-                <View style={{flex:1, backgroundColor: '#F5F5F5', paddingTop:20}}>
-                    <Text>Welcome DwellBeing Native</Text>
-                </View>
-            );
-        }*/
-        <View style={{flex: 1, backgroundColor: '#F5F5F5', paddingTop: 20}}>
-            <Text>Welcome DwellBeing Native</Text>
-        </View>
+       return(
+           <View style={{flex: 1, backgroundColor: '#F5F5F5', paddingTop: 20}}>
+               <Text>Welcome DwellBeing Native</Text>
+           </View>
+       )
     }
 };
 
@@ -54,17 +31,14 @@ class Home extends Component {
 // and insert/links it into the props of our component.
 // This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
-    return {
-        loading: state.dataReducer.loading,
-        data: state.dataReducer.data
-    }
+    return {}
 }
 
 // Doing this merges our actions into the component’s props,
 // while wrapping them in dispatch() so that they immediately dispatch an Action.
 // Just by doing this, we will have access to the actions defined in out actions file (action/home.js)
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators(Actions, dispatch);
+    return{}
 }
 
 //Connect everything
