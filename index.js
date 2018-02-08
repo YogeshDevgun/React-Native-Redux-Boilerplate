@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import DwellNative from './app/App';
+import dwell_redux from './app/App';
 
-AppRegistry.registerComponent('Dwell', () => DwellNative);
+AppRegistry.registerComponent('Dwell', () => dwell_redux);
